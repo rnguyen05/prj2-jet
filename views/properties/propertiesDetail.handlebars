@@ -1,0 +1,133 @@
+{{#if property}}
+    <div class = "container">
+
+        <br>
+
+        <div class="row border pt-4 pl-4">
+            <div class="col-3 ">
+
+                {{#if property.dataValues.Photos}}
+
+                    <a href = {{firstArrayItem property.dataValues.Photos}} target = "_blank">
+                        <img class="card-img-top w-100 d-block" src={{firstArrayItem property.dataValues.Photos}} alt = "image">
+                    </a>
+
+                {{else}}
+
+                    <img class = "card-img-top w-100 d-block" src = "../assets/images/no_image.png">
+
+                {{/if}}
+
+                {{!-- {{#each {{allPics property.dataValues.Photos}}}}
+                    <a href = {{this}}>
+                        <img class = "card-img-top w-50 d-block" src = {{this}} alt = "smallImage">
+                    </a>
+                {{/each}} --}}
+
+                
+
+            </div>
+            <div class="col-3 ">
+                <p>
+                    Price:
+                    {{property.dataValues.Price}}
+                </p>
+                <p>
+                    PricePerSqFt:
+                    {{property.dataValues.PricePerSqFt}}
+                </p>
+                <p>
+                    RentAmount:
+                    {{property.dataValues.RentAmount}}
+                </p>
+                <p>
+                    RegionName:
+                    {{property.dataValues.RegionName}}
+                </p>
+                <p>
+                    PriceToRentRatio:
+                    {{property.dataValues.PriceToRentRatio}}
+                </p>
+                <p>
+                    HOA:
+                    {{property.dataValues.HOA}}
+                </p>
+            </div>
+
+            <div class="col-3">
+                <p>
+                    property ID:
+                    {{property.dataValues.PID}}
+                </p> 
+                <p>
+                    Status:
+                    {{property.dataValues.Status}}
+                </p>
+                <p>
+                    PropertyID:
+                    {{property.dataValues.PropertyID}}
+                </p>
+                <p>
+                    ListingID:
+                    {{property.dataValues.ListingID}}
+                </p>
+                <p>
+                    Beds:
+                    {{property.dataValues.Beds}}
+                </p>
+                <p>
+                    Baths:
+                    {{property.dataValues.Baths}}
+                </p>
+                
+            </div>
+            <div class="col-3 ">
+                <p>
+                    SqFt:
+                    {{property.dataValues.SqFt}}
+                </p>
+                <p>
+                    LotSize:
+                    {{property.dataValues.LotSize}}
+                </p>
+                
+                <p>
+                    City: {{property.dataValues.City}}
+                </p>
+                <p>
+                    Zip: {{property.dataValues.Zip}}
+                </p>
+                <p>
+                    State:
+                    {{property.dataValues.State}}
+                </p>
+                <p>
+                    State:
+                    {{property.dataValues.PID}}
+                </p>
+                
+            </div>
+        
+        
+            
+            {{!-- {{dataValues. MLSIDLabel}}
+            --}}
+            {{!-- <label> --}}
+            {{!-- {{dataValues.Status}} --}}
+            {{!-- </label> --}}
+        
+        </div> 
+        <br>
+
+        <div class = "row border">
+            <div class = "col-12">
+                <p>Description:</p>
+                <br>
+                <p>{{property.dataValues.AgentNotes}}</p>
+            </div>
+        </div>
+
+
+    </div>
+    
+{{/if}}

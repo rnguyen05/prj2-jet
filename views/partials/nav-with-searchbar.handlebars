@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top clean-navbar nav-bg" id="navbar-shadow">
+    <div class="container">
+        <a class="navbar-brand logo" href="/">Jet System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcol-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <form class="form-inline">
+                <input id="newsearch" class="form-control ml-md-3" type="search" placeholder="Enter Zip Code or City" aria-label="Search" required>
+                <button id="newsearchBtn" class="btn btn-link my-2 my-sm-0" type="submit"><i class="fa fas fa-search fa-lg"></i></button>
+            </form>
+            {{#if isAuthenticated}}
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item " role="presentation">
+                        <a class="nav-link active" href="/users/sign-out">Log Out</a>
+                    </li>
+                </ul>
+            {{else}}
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item " role="presentation">
+                        <a class="nav-link active" href="/users/signup">Sign Up</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link page-scroll" data-toggle="modal" data-target="#login-modal" href="">Login</a>
+                    </li>
+                </ul>
+            {{/if}}
+        </div>
+    </div>
+</nav>
+

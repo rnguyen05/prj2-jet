@@ -1,0 +1,35 @@
+{{> nav }} 
+{{> login-modal }}
+<main class="page landing-page">
+    <header class="intro-header">
+        <section class="container">
+            <form id="locationInputForm">
+                <div class="form-group">
+                    <label for="location">
+                        <h5 class="header-title">Search Property</h5>
+                    </label>
+                    <input id="location" type="input" class="form-control form-control-lg" placeholder="Enter Zip Code or City" required>
+
+                    <label for="priceRange">
+                        <h5 class="header-title">Price Range</h5>
+                    </label>
+                    <select id="priceSelected" class="form-control form-control-lg">
+                        <option value="1">$0 - $200,000</option>
+                        <option value="2" selected>$200,000 - $500,000</option>
+                        <option value="3">$500,000 - $800,000</option>
+                        <option value="4">$800,000 - $100,000</option>
+                        <option value="5">$1,000,000 - $1,500,000</option>
+                        <option value="6">$1,500,000 - $2,000,000</option>
+                    </select>
+                </div>
+                <button type="submit" id="locationSend" class="btn btn-secondary">Submit</button>
+        </section>
+    </header>
+    {{> static-section }}
+
+</main>
+{{> footer }} 
+<script src="/assets/js/autoComplete.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmIhHffE-2bM0dKR_v3yHISDNhUAFdO4w&libraries=places&callback=initAutocomplete"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+

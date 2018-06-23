@@ -1,0 +1,158 @@
+{{> nav-with-searchbar }} {{> login-modal }}
+
+<div class="container space-top">
+    <div class="filters container ">
+        {{!-- <h4 class="article-header">Available Properties</h4> --}}
+        {{> properties-filters }}
+    </div>  
+
+    {{#if isAuthenticated}}
+        {{#each property}}
+        <div class="row space">
+            <div class="col-12 col-md-3 ">
+                {{!-- <img class="card-img-top w-100 d-block" src={{this.Photos}}>  --}}
+
+                {{#if this.Photos}}
+
+                    <img class="card-img-top proImg d-block" src={{firstArrayItem this.Photos}} alt = "image">
+                {{else}}
+                    <img class = "card-img-top proImg d-block" src = "/assets/images/no_image.png" alt = "altImage">
+                {{/if}}
+
+                <div class="pro-details">
+                    <button type="submit" class="btn btn-secondary detailProperties" data-pid="{{this.PID}}">View Detail</button>
+                    {{!-- <button class="btn btn-link my-2 my-sm-0" type="submit" id="savedProperty" data-id="{{this.PID}}"><i class="fa-2x fab far fa-heart fa-lg"></i></button> --}}
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <p>
+                    Price: <span class="currency">{{this.Price}}</span>
+                </p>
+                <p>
+                    Price/SqFt: {{this.PricePerSqFt}}
+                </p>
+                <p>
+                    Rent Amount: <span class="currency">{{this.RentAmount}}</span>
+                </p>
+                <p>
+                    Price To Rent Ratio: <span class="currency">{{this.PriceToRentRatio}}</span>
+                </p>
+                <p>
+                    HOA: <span class="currency">{{this.HOA}}</span>
+                </p>
+            </div>
+            <div class="col-12 col-md-3">
+                <p>Property ID: {{this.PID}}
+                </p>
+                <p>
+                    Listing ID: {{this.ListingID}}
+                </p>
+                <p>
+                    <span>Beds: {{this.Beds}} | Baths: {{this.Baths}}</span>
+                </p>
+                <p>
+                    SqFt: {{this.SqFt}}
+                </p>
+                <p>
+                    Status: {{this.Status}}
+                </p>
+            </div>
+            <div class="col-12 col-md-3 ">
+                <p>
+                    Lot Size: {{this.LotSize}}
+                </p>
+                <p>
+                    Street: {{this.Street}}
+                </p>
+                <p>
+                    City: {{this.City}}
+                </p>
+                <p>
+                    Zip: {{this.Zip}}
+                </p>
+                <p>
+                    State: {{this.State}}
+                </p>   
+
+            </div>
+        </div>
+        {{/each}}
+    {{else}}
+        {{#each property}}
+        <div class="row space">
+            <div class="col-12 col-md-3 ">
+                    {{#if this.Photos}}
+
+                    <img class="card-img-top proImg d-block" src={{firstArrayItem this.Photos}} alt = "image">
+                {{else}}
+                    <img class = "card-img-top proImg d-block" src = "/assets/images/no_image.png" alt = "altImage">
+
+                {{/if}}
+                <div class="pro-details">
+                    <button type="submit" class="btn btn-secondary btn-md detailProperties" data-toggle="modal" data-target="#login-modal" href="">View Details</button>
+                    {{!-- <button type="submit" class="btn btn-secondary detailProperties" data-id="{{this.PID}}">View Detail</button> --}}
+                    {{!-- <button class="btn btn-link my-2 my-sm-0" type="submit" data-id="{{this.PID}}"><i class="fa-2x fab far fa-heart fa-lg"></i></button> --}}
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <p>
+                    Price: <span class="currency">{{this.Price}}</span>
+                </p>
+                <p>
+                    Price/SqFt: {{this.PricePerSqFt}}
+                </p>
+                <p>
+                    Rent Amount: <span class="currency">{{this.RentAmount}}</span>
+                </p>
+                <p>
+                    Price To Rent Ratio: <span class="currency">{{this.PriceToRentRatio}}</span>
+                </p>
+                <p>
+                    HOA: <span class="currency">{{this.HOA}}</span>
+                </p>
+            </div>
+            <div class="col-12 col-md-3">
+                <p>
+                    Property ID: <button type="submit" class="btn btn-secondary btn-sm detailProperties" data-toggle="modal" data-target="#login-modal" href="">SignUp/Login</button>
+                    {{!-- <button type="submit" class="btn btn-secondary btn-sm detailProperties" href="/users/signup">Sign Up</button> --}}
+                </p>
+                <p>
+                    Listing ID: <button type="submit" class="btn btn-secondary btn-sm detailProperties" data-toggle="modal" data-target="#login-modal" href="">SignUp/Login</button>
+                    {{!-- <button type="submit" class="btn btn-secondary btn-sm detailProperties" href="/users/signup">Sign Up</button> --}}
+                </p>
+                <p>
+                    SqFt: {{this.SqFt}}
+                </p>
+                <p>
+                    <span>Beds: {{this.Beds}} | Baths: {{this.Baths}}</span>
+                </p>
+                <p>
+                    Status: {{this.Status}}
+                </p>
+            </div>
+            <div class="col-12 col-md-3 ">
+                
+                <p>
+                    Lot Size: {{this.LotSize}}
+                </p>
+                <p>
+                    Street: <button type="submit" class="btn btn-secondary btn-sm detailProperties" data-toggle="modal" data-target="#login-modal" href="">SignUp/Login</button>
+                    {{!-- <button type="submit" class="btn btn-secondary btn-sm detailProperties" href="/users/signup">Sign Up</button> --}}
+                </p>
+                <p>
+                    City: {{this.City}}
+                </p>
+                <p>
+                    Zip: {{this.Zip}}
+                </p>
+                <p>
+                    State: {{this.State}}
+                </p>               
+            </div>
+        </div>
+        {{/each}}
+    {{/if}}
+</div>
+
+
+{{> footer }}

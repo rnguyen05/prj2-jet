@@ -1,1 +1,2 @@
-# prj2-jet
+# prj2
+project 2

@@ -1,0 +1,192 @@
+.space {
+    border-bottom: 1px solid lightgrey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.currency:before{ content:'$'; }
+/* .currency:after{ content: '.00'; } */
+/* font-family: 'Great Vibes', cursive;
+font-family: 'Pompiere', cursive;
+font-family: 'PT Sans Narrow', sans-serif; 
+font-family: 'Anton', sans-serif;*/
+
+.section-header {
+    font-family: 'Anton', sans-serif;
+    font-size: 30pt;
+    color: gray;
+}
+
+.proImg {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+
+.nav-bg {
+    background-color: #333333;
+}
+
+
+.custom-btn {
+    font-family: 'Pompiere', cursive;
+    color: gray;
+    font-size: 20pt;
+}
+
+.nav-link {
+    font-family: 'Pompiere', cursive;
+    color: white;
+    font-size: 14pt !important;
+}
+
+.logo {
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 27pt !important;
+}
+
+
+#navbar-shadow {
+        -webkit-box-shadow: 0px 2px 2px black;
+        -moz-box-shadow:    0px 2px 2px black;
+        box-shadow:         0px 2px 2px black;
+        z-index:999;
+}
+
+.intro-header {
+    background: url(../images/landingbg.jpg) no-repeat;
+    padding-top:200px;
+    padding-bottom: 0px;
+    text-align: center;
+    color: #f8f8f8;
+    background-size: cover;
+    max-width:100%;
+    height: 800px; 
+}
+
+.clear-fix {
+    margin-top: 30px;
+}
+
+.article-header {
+    font-family: 'Anton', sans-serif;
+    font-size: 15pt !important;
+    padding-bottom: 5px;
+    border-bottom: 1px solid lightgrey;
+}
+
+p {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: black;
+}
+
+a {
+  color: black;
+}
+
+.pro-details {
+   margin-top: 10px;
+}
+
+.header-title {
+    font-family: 'Anton', sans-serif;
+    color: black;
+    font-size: 15pt !important;
+    /* padding-top: 15px; */
+}
+
+#locationInputForm {
+    border: 1px solid gray;
+    max-width: 350px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+    height: 320px;
+    border-radius: 4px;
+    opacity: .93;
+}
+
+.space-top {
+    margin-top:130px;
+}
+
+.xs-searchbar {
+    width: 500px;
+    max-width: 600px;
+    margin-left: 50px;
+}
+
+.fa {
+    color: white;
+}
+
+.fab {
+    color: black;
+}
+
+.fab:hover {
+    color: red;
+}
+
+.filters {
+    /* margin-left: 20px; */
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
+/****** LOGIN MODAL ******/
+#login-modal {
+  max-width: 390px;
+  width: 100% !important;
+  margin: 0 auto;
+  padding: 20px;
+  vertical-align: center;
+}
+
+
+.header-title {
+  font-family: 'Anton', sans-serif;
+  color: black;
+  font-size: 20pt !important;
+  padding-top: 15px;
+}
+
+#loginForm {
+  margin-top: 30px;
+} 
+
+.form-horizontal {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  width: 305px;
+  height: 50px;
+} 
+
+.btn-margin {
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.login-help{
+  font-size: 12px;
+}
+
+.form-group {
+  font-size: 14pt;
+}
+
+/* .loginmodal-submit:hover {
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: black;
+} */
+
+.loginmodal-submit {
+  border-radius: 4px;
+}
+
+.regForm {
+    margin-bottom: 20px;
+}
